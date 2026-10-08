@@ -13,8 +13,8 @@
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,json,md}\"",
     "format:fix": "prettier --write \"src/**/*.{ts,tsx,js,json,md}\"",
     "check-all": "pnpm run lint && pnpm run format:check",
-    "test": "vitest",
-    "test:run": "vitest run",
+    "test": "cross-env NODE_ENV=test vitest",
+    "test:run": "cross-env NODE_ENV=test vitest run",
     "test:coverage": "vitest run --coverage"
   },
   "keywords": [],
@@ -37,6 +37,7 @@
     "@types/node": "^26.2.0",
     "@types/supertest": "^7.2.1",
     "@types/swagger-ui-express": "^4.1.8",
+    "cross-env": "^10.1.0",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.12.0",
